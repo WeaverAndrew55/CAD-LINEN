@@ -1,0 +1,52 @@
+{
+  "238210": {
+    "industry": "Electrical Contractors",
+    "compliance_needs": "NFPA 70E / CAT 2 / CSA Z462",
+    "recommended_garments": "GO-C083, GO-S045, GO-J026",
+    "trigger_keywords": [
+      "electrical contractor",
+      "electrician",
+      "panel builder"
+    ]
+  },
+  "311611": {
+    "industry": "Meat Processing",
+    "compliance_needs": "HACCP, CFIA, SQF",
+    "recommended_garments": "White coats, GO-C042, Mats",
+    "trigger_keywords": [
+      "meat processing",
+      "butcher",
+      "food co-packer"
+    ]
+  },
+  "332710": {
+    "industry": "Machine Shops",
+    "compliance_needs": "Arc flash, Oil exposure",
+    "recommended_garments": "FR shirts, pants, branded imagewear",
+    "trigger_keywords": [
+      "machine shop",
+      "precision machining",
+      "metal lathe"
+    ]
+  },
+  "236220": {
+    "industry": "Commercial Construction",
+    "compliance_needs": "CSA Z96 Class 1/2",
+    "recommended_garments": "GO-C083, GO-S066",
+    "trigger_keywords": [
+      "commercial construction",
+      "contractor",
+      "general contractor"
+    ]
+  },
+  "325110": {
+    "industry": "Petrochemical Manufacturing",
+    "compliance_needs": "NFPA 2112, CAT 2/3",
+    "recommended_garments": "Full FR lineup + First Aid",
+    "trigger_keywords": [
+      "chemical plant",
+      "refinery",
+      "petrochemical"
+    ]
+  }
+}
