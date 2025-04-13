@@ -1,5 +1,6 @@
 import json
 import os
+import re # For parsing display options
 
 class NAICSKeywordMap:
     def __init__(self, json_path="../data/naics_keywords.json"):
@@ -41,3 +42,21 @@ class NAICSKeywordMap:
 
     def get_all_data(self):
         return self.map
+
+    def get_display_options(self) -> list[str]:
+        """Generates a list of strings for the multi-select dropdown.
+           Format: 'Industry Name (Compliance Tag) [NAICS]'"""
+        options = []
+        for naics, details in self.map.items():
+            industry = details.get('industry_name', 'N/A')
+            compliance = details.get('compliance_tags', ['General'])[0] # Take first tag for display
+            options.append(f"{industry} ({compliance}) [{naics}]")
+        return sorted(options)
+
+    def get_details_from_display_option(self, display_option: str) -> dict | None:
+        """Parses the display option string to find the corresponding NAICS details."""
+        match = re.search(r'\[(\d+)\]$', display_option) # Extract NAICS from brackets at the end
+        if match:
+            naics_code = match.group(1)
+            return self.map.get(naics_code)
+        return None
